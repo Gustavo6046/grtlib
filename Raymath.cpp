@@ -99,3 +99,16 @@ Ray camlerp(Camera* cam, double stepX, double stepY)
 
     return res;
 }
+
+Ray dcamlerp(Camera* cam, double stepX, double stepY)
+{
+    double a = -dfovtan(cam->fov, 1.0);
+    double b = -a;
+
+    Ray res;
+
+    res.start = cam->position;
+    res.dir = fromPolar(lerp(a, b, stepX), lerp(a, b, stepY));
+
+    return res;
+}

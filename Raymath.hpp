@@ -1,7 +1,7 @@
 #ifndef RAYMATH_H
 #define RAYMATH_H
 
-#include "Camera.h"
+#include "Camera.hpp"
 
 
 struct Ray
@@ -14,5 +14,6 @@ double fovtan(double fov, double i);
 double dfovtan(double fov, double i);
 Vector fromPolar(double pitch, double yaw);
 Ray camlerp(Camera* cam, double stepX, double stepY);
+Ray dcamlerp(Camera* cam, double stepX, double stepY);
 
 #endif // RAYMATH_H

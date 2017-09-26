@@ -6,7 +6,7 @@ double intersectRaySphere(Vector rO, Vector rV, Vector sO, double sR)
 {
    Vector Q = sO - rO;
    double c = Q.sqlen();
-   double v = Q.dot(rV);
+   double v = Q ^ !rV;
    double d = sR*sR - (c - v*v);
 
    // If there was no intersection, return -1
@@ -28,4 +28,9 @@ Sphere::Sphere(Vector pos, double radius, Vector color)
     myPos = pos;
     myColor = color;
     myRadius = radius;
+}
+
+Vector Sphere::center()
+{
+    return myPos;
 }

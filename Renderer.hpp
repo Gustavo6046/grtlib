@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
-#include "Vector.h"
+#include "Vector.hpp"
 
 using std::vector;
 using std::string;
@@ -26,10 +26,12 @@ public:
     sf::RenderWindow window;
     sf::Sprite raytraced;
     string title;
+    bool bDrawDemanded;
 
     SFMLRenderer(string _title);
     bool render(int resX, int resY, Vector* colors);
     void drawWindow();
+    void drawDemanded() { bDrawDemanded = true; }
 };
 
 #endif // RENDERER_H

@@ -5,7 +5,7 @@
 #include <map>
 #include <vector>
 #include <string>
-#include "RenderObj.h"
+#include "RenderObj.hpp"
 
 using std::deque;
 using std::map;

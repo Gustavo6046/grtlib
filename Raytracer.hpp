@@ -1,9 +1,9 @@
 #ifndef RAYTRACER_H
 #define RAYTRACER_H
 
-#include "Scene.h"
-#include "Camera.h"
-#include "Renderer.h"
+#include "Scene.hpp"
+#include "Camera.hpp"
+#include "Renderer.hpp"
 
 class Raytracer
 {

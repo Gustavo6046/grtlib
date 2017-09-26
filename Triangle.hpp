@@ -1,11 +1,11 @@
 #ifndef TRIANGLE_H
 #define TRIANGLE_H
 
-#include "Line.h"
-#include "Camera.h"
-#include "Vector.h"
-#include "Raymath.h"
-#include "RenderObj.h"
+#include "Line.hpp"
+#include "Camera.hpp"
+#include "Vector.hpp"
+#include "Raymath.hpp"
+#include "RenderObj.hpp"
 
 #include <math.h>
 
@@ -19,6 +19,7 @@ class Triangle :public RenderObj
         std::vector< std::pair<Vector*, Vector*> > edges;
         Vector myColor;
         bool bIntersects(Ray* ray, double* dist);
+        Vector center();
 
     protected:
     private:

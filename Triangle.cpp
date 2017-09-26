@@ -46,3 +46,19 @@ bool Triangle::bIntersects(Ray* ray, double* dist)
         dist, unused, unused
     ) > 0;
 }
+
+Vector Triangle::center()
+{
+    Vector vertexes[3] = {
+        *edges[0].first,
+        *edges[1].first,
+        *edges[2].first
+    };
+
+    Vector res;
+
+    for ( Vector v : vertexes )
+        res = res + v;
+
+    return res / 3;
+}

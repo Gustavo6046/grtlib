@@ -3,7 +3,9 @@
 
 #include <vector>
 #include <cmath>
+#include <sstream>
 
+using std::stringstream;
 using std::max;
 
 
@@ -13,30 +15,23 @@ class Vector
         /** Default constructor */
         Vector(double x, double y, double z);
 
-        /** Access x
-         * \return The current value of x
-         */
-        double Getx() { return x; }
-        /** Set x
-         * \param val New value to set
-         */
-        void Setx(double val) { x = val; }
-        /** Access y
-         * \return The current value of y
-         */
-        double Gety() { return y; }
-        /** Set y
-         * \param val New value to set
-         */
-        void Sety(double val) { y = val; }
-        /** Access z
-         * \return The current value of z
-         */
-        double Getz() { return z; }
-        /** Set z
-         * \param val New value to set
-         */
-        void Setz(double val) { z = val; }
+        std::string repr()
+        {
+            stringstream composition;
+
+            composition << "x=" << x << ",y=" << y << ",z=" << z;
+
+            return composition.str();
+        }
+
+        std::string repr(char labels[3])
+        {
+            stringstream composition;
+
+            composition << labels[0] << "=" << x << "," << labels[1] << "=" << y << "," << labels[2] << "=" << z;
+
+            return composition.str();
+        }
 
         Vector();
 
@@ -106,9 +101,9 @@ class Vector
 
         Vector norm()
         {
-            double v = max(max(x, y), z);
+            Vector na = *this;
 
-            return Vector(x / v, y / v, z / v);
+            return *(na.div(na.len()));
         }
 
         static Vector* mean(std::vector<Vector> vectors)
@@ -133,6 +128,13 @@ class Vector
             return x + y + z;
         }
 
+        double towardness(Vector other)
+        {
+            Vector nv = *this;
+
+            return nv.norm().dot(other.norm());
+        }
+
         double dot(Vector other)
         {
             Vector a = other;
@@ -148,10 +150,16 @@ class Vector
     private:
 };
 
+bool operator== (Vector a, Vector b);
+bool operator!= (Vector a, Vector b);
+double operator^ (Vector a, Vector b); // dot product
 Vector operator- (Vector a, Vector b);
 Vector operator+ (Vector a, Vector b);
 Vector operator* (Vector a, Vector b);
 Vector operator/ (Vector a, Vector b);
-Vector operator! (Vector a);
+Vector operator* (Vector a, double b);
+Vector operator/ (Vector a, double b);
+Vector operator! (Vector a); // vector normal
+double operator~ (Vector a); // vector length
 
 #endif // VERTEX_H

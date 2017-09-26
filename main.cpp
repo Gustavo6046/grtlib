@@ -16,6 +16,8 @@
 
 int main(int argc, char* argv[])
 {
+
+
     Camera cam;
     Scene ctx;
 
@@ -27,9 +29,9 @@ int main(int argc, char* argv[])
     ctx.objects.push_back(Triangle(new Vector[3] {Vector(-1024, 0, -16), Vector(0, 1024, -16), Vector(1024, 0, -16)}, Vector(255, 0, 0)));
     ctx.objects.push_back(Sphere(Vector(512, 0, 512), 512, Vector(0, 0, 255)));
 
-    cam.fov = 90;
+    cam.fov = 90    ;
     cam.position = Vector(512, -768, 512);
-    cam.rotation = !Vector(0, 3, -1);
+    cam.rotation = !Vector(0, 1, 0);
 
     tracer.renderFor(&cam, &renderer);
 

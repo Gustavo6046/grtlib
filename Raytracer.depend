@@ -9,13 +9,14 @@
 	<vector>
 	<cmath>
 
-1506270689 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\vector.cpp
-	"Vector.h"
+1506466937 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\vector.cpp
+	<iostream>
+	"Vector.hpp"
 
-1506444508 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.cpp
-	"Triangle.h"
-	"Raymath.h"
-	"Camera.h"
+1506466902 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.cpp
+	"Triangle.hpp"
+	"Raymath.hpp"
+	"Camera.hpp"
 
 1506444504 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.h
 	"Line.h"
@@ -25,10 +26,11 @@
 	"RenderObj.h"
 	<math.h>
 
-1506269342 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raytracer.cpp
-	"Raytracer.h"
-	"Renderer.h"
-	"Raymath.h"
+1506467424 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raytracer.cpp
+	"Raytracer.hpp"
+	"Renderer.hpp"
+	"Raymath.hpp"
+	<iostream>
 	<vector>
 
 1506445629 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raytracer.h
@@ -63,45 +65,47 @@
 	<string>
 	"Vector.h"
 
-1506447127 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderer.cpp
-	"Renderer.h"
+1506465718 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderer.cpp
+	"Renderer.hpp"
 	<vector>
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
 	<string>
-	"Vector.h"
+	<iostream>
+	<memory>
+	"Vector.hpp"
 
-1506446409 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\main.cpp
-	"Raytracer.h"
-	"Renderer.h"
-	"Triangle.h"
-	"Sphere.h"
-	"Scene.h"
-	"Camera.h"
+1506467081 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\main.cpp
+	"Raytracer.hpp"
+	"Renderer.hpp"
+	"Triangle.hpp"
+	"Sphere.hpp"
+	"Scene.hpp"
+	"Camera.hpp"
 
 1506221866 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raymath.h
 	"Camera.h"
 
-1506224511 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raymath.cpp
-	"Camera.h"
-	"Vector.h"
-	"Raymath.h"
+1506466049 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raymath.cpp
+	"Camera.hpp"
+	"Vector.hpp"
+	"Raymath.hpp"
 	<cmath>
 
-1506273025 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\scene.cpp
-	"Scene.h"
+1506447915 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\scene.cpp
+	"Scene.hpp"
 	<deque>
 
 1506269436 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderobj.h
 	"Raymath.h"
 
-1506269517 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderobj.cpp
-	"RenderObj.h"
+1506466709 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderobj.cpp
+	"RenderObj.hpp"
 
-1506444255 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\sphere.cpp
-	"Vector.h"
-	"Sphere.h"
+1506467001 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\sphere.cpp
+	"Vector.hpp"
+	"Sphere.hpp"
 
 1506272784 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\sphere.h
 	"Vector.h"
@@ -494,4 +498,51 @@
 	<SFML/System/String.hpp>
 	<string>
 	<vector>
+
+1506449227 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raytracer.hpp
+	"Scene.hpp"
+	"Camera.hpp"
+	"Renderer.hpp"
+
+1506449230 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\scene.hpp
+	<deque>
+	<map>
+	<vector>
+	<string>
+	"RenderObj.hpp"
+
+1506466691 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderobj.hpp
+	"Raymath.hpp"
+
+1506466035 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raymath.hpp
+	"Camera.hpp"
+
+1506467053 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\camera.hpp
+	"Vector.hpp"
+
+1506467556 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\vector.hpp
+	<vector>
+	<cmath>
+	<sstream>
+
+1506452711 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\renderer.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+	<string>
+	"Vector.hpp"
+
+1506466760 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.hpp
+	"Line.hpp"
+	"Camera.hpp"
+	"Vector.hpp"
+	"Raymath.hpp"
+	"RenderObj.hpp"
+	<math.h>
+
+1506449253 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\line.hpp
+	"Vector.hpp"
+
+1506466728 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\sphere.hpp
+	"Vector.hpp"
+	"RenderObj.hpp"
 

@@ -14,16 +14,16 @@ WINDRES = windres.exe
 INC =  -I$(SFML_INCLUDE)
 CFLAGS =  -Wall -DSFML_DYNAMIC
 RESINC = 
-LIBDIR =  -L$(SFML_LIB) -L$(SFML_BIN)
-LIB =  -lsfml-graphics -lsfml-window -lsfml-system
+LIBDIR =  -L$(SFML_LIB)
+LIB =  -lopengl32
 LDFLAGS = 
 
 INC_DEBUG =  $(INC)
-CFLAGS_DEBUG =  $(CFLAGS) -std=c++11 -g -DSFML_STATIC
+CFLAGS_DEBUG =  $(CFLAGS) -std=c++11 -g
 RESINC_DEBUG =  $(RESINC)
 RCFLAGS_DEBUG =  $(RCFLAGS)
-LIBDIR_DEBUG =  $(LIBDIR)
-LIB_DEBUG = $(LIB)
+LIBDIR_DEBUG =  $(LIBDIR) -L$(SFML_LIB)
+LIB_DEBUG = $(LIB) -lsfml-graphics-d -lsfml-window-d -lsfml-system-d
 LDFLAGS_DEBUG =  $(LDFLAGS)
 OBJDIR_DEBUG = obj\\Debug
 DEP_DEBUG = 
@@ -33,8 +33,8 @@ INC_RELEASE =  $(INC)
 CFLAGS_RELEASE =  $(CFLAGS) -O2
 RESINC_RELEASE =  $(RESINC)
 RCFLAGS_RELEASE =  $(RCFLAGS)
-LIBDIR_RELEASE =  $(LIBDIR)
-LIB_RELEASE = $(LIB)
+LIBDIR_RELEASE =  $(LIBDIR) -L$(SFML_LIB)
+LIB_RELEASE = $(LIB) -lsfml-graphics -lsfml-window -lsfml-system
 LDFLAGS_RELEASE =  $(LDFLAGS) -s
 OBJDIR_RELEASE = obj\\Release
 DEP_RELEASE = 

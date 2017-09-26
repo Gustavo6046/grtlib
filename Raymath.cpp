@@ -1,6 +1,6 @@
-#include "Camera.h"
-#include "Vector.h"
-#include "Raymath.h"
+#include "Camera.hpp"
+#include "Vector.hpp"
+#include "Raymath.hpp"
 
 #include <cmath>
 

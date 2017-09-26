@@ -1,5 +1,5 @@
-#include "Vector.h"
-#include "Sphere.h"
+#include "Vector.hpp"
+#include "Sphere.hpp"
 
 
 double intersectRaySphere(Vector rO, Vector rV, Vector sO, double sR)

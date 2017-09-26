@@ -1,6 +1,6 @@
-#include "Triangle.h"
-#include "Raymath.h"
-#include "Camera.h"
+#include "Triangle.hpp"
+#include "Raymath.hpp"
+#include "Camera.hpp"
 
 
 extern "C" int intersect_triangle3(double orig[3], double dir[3],

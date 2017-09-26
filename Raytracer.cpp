@@ -1,6 +1,6 @@
-#include "Raytracer.h"
-#include "Renderer.h"
-#include "Raymath.h"
+#include "Raytracer.hpp"
+#include "Renderer.hpp"
+#include "Raymath.hpp"
 
 #include <vector>
 

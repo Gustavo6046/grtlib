@@ -6,12 +6,12 @@
  * This program was created as a hackable experiment.
  */
 
-#include "Raytracer.h"
-#include "Renderer.h"
-#include "Triangle.h"
-#include "Sphere.h"
-#include "Scene.h"
-#include "Camera.h"
+#include "Raytracer.hpp"
+#include "Renderer.hpp"
+#include "Triangle.hpp"
+#include "Sphere.hpp"
+#include "Scene.hpp"
+#include "Camera.hpp"
 
 
 int main(int argc, char* argv[])

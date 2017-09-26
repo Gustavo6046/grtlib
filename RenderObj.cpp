@@ -1,4 +1,4 @@
-#include "RenderObj.h"
+#include "RenderObj.hpp"
 
 
 bool RenderObj::bIntersects(Ray* ray, double* dist)

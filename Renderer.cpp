@@ -1,11 +1,11 @@
-#include "Renderer.h"
+#include "Renderer.hpp"
 
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <string>
-#include "Vector.h"
+#include "Vector.hpp"
 
 using std::vector;
 using std::string;

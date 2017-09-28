@@ -12,11 +12,31 @@
 #include "Sphere.hpp"
 #include "Scene.hpp"
 #include "Camera.hpp"
+#include "assertion.cpp"
+#include <iostream>
 
 
 int main(int argc, char* argv[])
 {
+    Ray testRay;
+    Vector zeroVec;
+    double dist;
 
+    testRay.start = Vector(0, -4, 0);
+    testRay.dir = Vector(0, 1, 0);
+
+    try
+    {
+        assert<bool>("Sphere Intersection #1", (new Sphere(zeroVec, 2, zeroVec))->bIntersects(&testRay, &dist), true);
+        assert<bool>("Sphere Intersection #2", (new Sphere(*(new Vector(0, 0, 4.5)), 2, zeroVec))->bIntersects(&testRay, &dist), false);
+        assert<bool>("Triangle Intersection #1", (new Triangle(new Vector[3]{*(new Vector(-4, 0, -4)), *(new Vector(0, 0, 4)), *(new Vector(4, 0, -4))}, zeroVec))->bIntersects(&testRay, &dist), true);
+    }
+
+    catch (string err)
+    {
+        std::cout << err << "\n";
+        throw err;
+    }
 
     Camera cam;
     Scene ctx;

@@ -2,11 +2,6 @@
 #include "Raymath.hpp"
 #include "Camera.hpp"
 
-
-extern "C" int intersect_triangle3(double orig[3], double dir[3],
-			double vert0[3], double vert1[3], double vert2[3],
-			double *t, double *u, double *v);
-
 Triangle::Triangle(Vector points[3], Vector _color)
 {
     myColor = _color;
@@ -29,22 +24,50 @@ Triangle::Triangle(Vector points[3], Vector _color)
 
 bool Triangle::bIntersects(Ray* ray, double* dist)
 {
-    double unused_;
-    double* unused = &unused_;
-    Vector cv;
+    Vector rayOrigin = ray->start;
+    Vector rayVector = !(ray->dir);
 
-    cv = ray->start;
+    const float EPSILON = 0.0000001;
 
-    ray->dir.add(ray->start);
+    Vector vertex0 = *(this->edges[0].first);
+    Vector vertex1 = *(this->edges[1].first);
+    Vector vertex2 = *(this->edges[2].first);
+    Vector edge1, edge2, h, s, q;
 
-    return intersect_triangle3(
-        &(ray->start.c_array()[0]),
-        &(ray->dir.c_array()[0]),
-        &(edges[0].first->c_array()[0]),
-        &(edges[1].first->c_array()[0]),
-        &(edges[2].first->c_array()[0]),
-        dist, unused, unused
-    ) > 0;
+    float a,f,u,v;
+
+    edge1 = vertex1 - vertex0;
+    edge2 = vertex2 - vertex0;
+    h = rayVector.cross(edge2);
+    a = edge1 ^ h;
+
+    if (a > -EPSILON && a < EPSILON)
+        return false;
+
+    f = 1/a;
+    s = rayOrigin - vertex0;
+    u = f * (s.dot(h));
+
+    if (u < 0.0 || u > 1.0)
+        return false;
+
+    q = s.cross(edge1);
+    v = f * rayVector.dot(q);
+
+    if (v < 0.0 || u + v > 1.0)
+        return false;
+
+    // At this stage we can compute t to find out where the intersection point is on the line.
+    float t = f * edge2.dot(q);
+
+    if (t > EPSILON) // ray intersection
+    {
+        *dist = ~((!rayVector) * (t * rayVector.len()));
+        return true;
+    }
+
+    else // This means that there is a line intersection but not a ray intersection.
+        return false;
 }
 
 Vector Triangle::center()

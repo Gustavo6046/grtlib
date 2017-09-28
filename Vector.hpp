@@ -15,6 +15,16 @@ class Vector
         /** Default constructor */
         Vector(double x, double y, double z);
 
+        // credits to Rosetta Code
+        Vector cross ( Vector& rhs ) {
+            double a = y * rhs.z - z * rhs.y ;
+            double b = z * rhs.x - x * rhs.z ;
+            double c = x * rhs.y - y * rhs.x ;
+
+            Vector product(a, b, c);
+            return product;
+        }
+
         std::string repr()
         {
             stringstream composition;

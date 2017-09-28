@@ -31,5 +31,11 @@
 *.out
 *.app
 
+# Code::Blocks Project Files
+*.cbp
+
+# Folder-Specific
 bin/
 build/
+!deps/
+CMakeFiles/

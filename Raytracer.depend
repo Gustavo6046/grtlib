@@ -13,7 +13,7 @@
 	<iostream>
 	"Vector.hpp"
 
-1506466902 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.cpp
+1506477734 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.cpp
 	"Triangle.hpp"
 	"Raymath.hpp"
 	"Camera.hpp"
@@ -76,13 +76,15 @@
 	<memory>
 	"Vector.hpp"
 
-1506467081 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\main.cpp
+1506538405 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\main.cpp
 	"Raytracer.hpp"
 	"Renderer.hpp"
 	"Triangle.hpp"
 	"Sphere.hpp"
 	"Scene.hpp"
 	"Camera.hpp"
+	"assertion.cpp"
+	<iostream>
 
 1506221866 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\raymath.h
 	"Camera.h"
@@ -520,7 +522,7 @@
 1506467053 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\camera.hpp
 	"Vector.hpp"
 
-1506467556 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\vector.hpp
+1506477299 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\vector.hpp
 	<vector>
 	<cmath>
 	<sstream>
@@ -531,7 +533,7 @@
 	<string>
 	"Vector.hpp"
 
-1506466760 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.hpp
+1506477671 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\triangle.hpp
 	"Line.hpp"
 	"Camera.hpp"
 	"Vector.hpp"
@@ -545,4 +547,12 @@
 1506466728 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\sphere.hpp
 	"Vector.hpp"
 	"RenderObj.hpp"
+
+1506472116 source:c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\assertion.cpp
+	<sstream>
+	<string>
+
+1506472491 c:\users\gusta_000.acer\desktop\scripts\c++\raytracer\assertion.cpp
+	<sstream>
+	<string>
 

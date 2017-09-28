@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# Cache files
+*.depend
+
 # Compiled Object files
 *.slo
 *.lo
@@ -39,3 +42,4 @@ bin/
 build/
 !deps/
 CMakeFiles/
+generated/
